@@ -31,15 +31,6 @@ agentcell deploy --cell my-app .    # a directory with a Dockerfile listening on
 | [agentcell-client](https://github.com/AgentCell-dev/agentcell-client) | One static Go binary: the human CLI and the MCP server for coding agents |
 | [samples](https://github.com/AgentCell-dev/samples) | Working apps to start from or hand to an agent as the pattern to copy: static site, notes app on SQLite, Go service, Node worker |
 
-## What works today (September 2026)
-
-The design is a directory in, a URL out, with runtime and port detected, then sharing, rollback, env, domains and spend as CLI commands and MCP tools. Conditions apply: not all of it has shipped.
-
-- Deploy needs a `Dockerfile` running one container on port 8080, with `/data` for files that must survive a restart. Detection without a Dockerfile is planned.
-- Implemented: `deploy`, `logs`, `ps`, `whoami`. The other listed verbs answer a typed `not_found` until they ship.
-- Sharing an app with named colleagues, who sign in with the work account they already have, is in private beta. [Request early access](https://agentcell.dev/#early-access) for that.
-- Idle cells sleep and are not billed. No fee per app, no seats.
-
 ## Read more
 
 - Site index for agents: https://agentcell.dev/llms.txt
